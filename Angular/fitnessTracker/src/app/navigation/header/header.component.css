@@ -1,0 +1,28 @@
+
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover,
+a:active {
+    color: pink;
+}
+
+.navigation-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-caption {
+    display: inline-block;
+    padding-left: 6px;
+}
+
+.ng-fitness-link{
+    padding-left: 15px;
+}
+
+button mat-icon {
+    color: purple;
+}

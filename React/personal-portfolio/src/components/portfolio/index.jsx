@@ -9,10 +9,10 @@ import Showcase from "./showcase";
 const projectsData = [
     {
         id: 1,
-        name: "Healthy Food Restraunt",
-        tags: ["web-app", "mobile-app"],
+        name: "Netflix Clone",
+        tags: ["web-app",],
         media: {
-            thumbnail: require("../images/portfolio/thumb-1.jpg"),
+            thumbnail: require("../images/nf.jpg"),
         },
     },
     {
@@ -33,10 +33,10 @@ const projectsData = [
     },
     {
         id: 4,
-        name: "Business Analytics Web App",
-        tags: ["web-app", "mobile-app"],
+        name: "Fitness Tracker",
+        tags: ["web-app",],
         media: {
-            thumbnail: require("../images/portfolio/thumb-1.jpg"),
+            thumbnail: require("../images/fitness.jpg"),
         },
     },
     {
@@ -50,23 +50,23 @@ const projectsData = [
     {
         id: 6,
         name: "Dashboard",
-        tags: ["product", "mobile-app"],
+        tags: ["mobile-app",],
         media: {
             thumbnail: require("../images/portfolio/thumb-4.jpg"),
         },
     },
     {
         id: 7,
-        name: "Digital Creative Agency",
+        name: "Weather App",
         tags: ["web-app"],
         media: {
-            thumbnail: require("../images/portfolio/thumb-3.jpg"),
+            thumbnail: require("../images/weather2.jpg"),
         },
     },
     {
         id: 8,
         name: "Admin Dashboard",
-        tags: ["web-app", "mobile-app", "web-page"],
+        tags: [ "web-page"],
         media: {
             thumbnail: require("../images/dasboard.jpg"),
         },

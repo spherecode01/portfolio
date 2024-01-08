@@ -15,8 +15,10 @@ const Showcase = ({ data, transition, selectedProjectId, setSelectedProjectId })
       2: 'https://chimerical-melomakarona-91f8f3.netlify.app', //Google project id
       5: 'https://calm-tulumba-fa2082.netlify.app', // Youtube
       8: 'https://rad-palmier-944588.netlify.app', // Admin Dashboard
+      1: "https://polite-tulumba-c25fc1.netlify.app/", //Netflix clone
+      7: "https://frolicking-longma-ec5ea9.netlify.app/" //Weather App
 
-
+      // Add more mappings as needed
     };
 
     const netlifyLink = netlifyLinks[selectedProjectId];

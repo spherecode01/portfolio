@@ -8,19 +8,19 @@ const filtersData = [
         id: "all",
     },
     {
-        name: "Products",
+        name: "HTML+CSS",
         id: "product",
     },
     {
-        name: "Web Pages",
+        name: "React",
         id: "web-page",
     },
     {
-        name: "Web Apps",
+        name: "Angular",
         id: "web-app",
     },
     {
-        name: "Mobile Apps",
+        name: "MERN",
         id: "mobile-app",
     },
 ]

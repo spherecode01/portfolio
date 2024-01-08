@@ -4,6 +4,8 @@ import Section from "../shared/section";
 import Filters from "./filters";
 import Showcase from "./showcase";
 
+
+
 const projectsData = [
     {
         id: 1,
@@ -15,18 +17,18 @@ const projectsData = [
     },
     {
         id: 2,
-        name: "Anna & Daniel",
+        name: "Google",
         tags: ["web-page"],
         media: {
-            thumbnail: require("../images/portfolio/thumb-2.jpg"),
+            thumbnail: require("../images/google.jpg"),
         },
     },
     {
         id: 3,
-        name: "Web Design Landing Page",
+        name: "Movie X",
         tags: ["web-page"],
         media: {
-            thumbnail: require("../images/portfolio/thumb-8.jpg"),
+            thumbnail: require("../images/movie.jpg"),
         },
     },
     {
@@ -39,16 +41,16 @@ const projectsData = [
     },
     {
         id: 5,
-        name: "Limitless",
-        tags: ["web-app", "web-page"],
+        name: "Youtube Clone",
+        tags: [ "web-page"],
         media: {
-            thumbnail: require("../images/portfolio/thumb-6.jpg"),
+            thumbnail: require("../images/youtube.jpg"),
         },
     },
     {
         id: 6,
         name: "Dashboard",
-        tags: ["product", "web-app", "mobile-app"],
+        tags: ["product", "mobile-app"],
         media: {
             thumbnail: require("../images/portfolio/thumb-4.jpg"),
         },
@@ -63,50 +65,57 @@ const projectsData = [
     },
     {
         id: 8,
-        name: "Virtual Reality Experience",
+        name: "Admin Dashboard",
         tags: ["web-app", "mobile-app", "web-page"],
         media: {
-            thumbnail: require("../images/portfolio/thumb-5.jpg"),
+            thumbnail: require("../images/dasboard.jpg"),
         },
     },
 ]
 
 
+
+
 const Portfolio = () => {
     const [projects, setProjects] = useState(projectsData);
     const [transition, setTransition] = useState(false);
-
+    const [selectedProjectId, setSelectedProjectId] = useState(null);
+  
     const filterProjects = (tag) => {
-        setTransition("zoomout")
-
-
-        setTimeout (()=> {
-            if(tag !== "all"){
-                const filteredProjects = projectsData.filter((f)=> f.tags.includes(tag))
-                setProjects(filteredProjects);
-            }else{
-                setProjects(projectsData);
-            }
-            setTransition("zoomin")
-        }, 200);
-
-        setTimeout(()=> {
-            setTransition(false);
-        },600)
-    }
-
-  return (
-    <Section
-      id="portfolio"
-      title="Check my Portfolio"
-      background="light"
-    >
+      setTransition("zoomout");
+  
+      setTimeout(() => {
+        if (tag !== "all") {
+          const filteredProjects = projectsData.filter((f) => f.tags.includes(tag));
+          setProjects(filteredProjects);
+        } else {
+          setProjects(projectsData);
+        }
+        setTransition("zoomin");
+      }, 200);
+  
+      setTimeout(() => {
+        setTransition(false);
+      }, 600);
+    };
+  
+    return (
+      <Section id="portfolio" title="Check our Portfolio" background="light">
         <div className="portfolio-content-wrapper">
-            <Filters filterProjects={(tag)=> filterProjects(tag)} />
-             <Showcase data={projects} transition={transition}/>
+          <Filters filterProjects={(tag) => filterProjects(tag)} />
+          <Showcase
+            data={projects}
+            transition={transition}
+            selectedProjectId={selectedProjectId}
+            setSelectedProjectId={setSelectedProjectId}
+          />
         </div>
-    </Section>
-  );
-};
+      </Section>
+    );
+  };
+  
+  export default Portfolio;
 
-export default Portfolio;
+
+
+//https://chimerical-melomakarona-91f8f3.netlify.app
